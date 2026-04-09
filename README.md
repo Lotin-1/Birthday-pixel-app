@@ -17,5 +17,9 @@ A cute interactive birthday web app made with Vue.js 💖
 - JavaScript
 - Vue.js
 
+## 💡 Inspiration
+This project was inspired by a TikTok video from Nasha, where a small interactive digital experience was created with a soft and emotional aesthetic.
+
+I wanted to recreate that feeling and turn it into a personalized birthday experience, combining creativity, design, and code.
 ## 💌 Purpose
 This project was created as a creative and emotional digital birthday experience.
