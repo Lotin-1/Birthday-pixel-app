@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente pixel -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+<div id="app">
+
+  <div class="ventana">
+
+    <!-- barra -->
+    <div class="barra">
+      <span>Birthday App &lt;3</span>
+      <div class="botones">
+        <span>—</span>
+        <span>✕</span>
+      </div>
+    </div>
+
+    <!-- contenido -->
+    <div class="contenido">
+
+      <p v-if="pantalla==='inicio'" class="titulo">
+        What are you choosing today?
+      </p>
+
+      <div v-if="pantalla==='inicio'" class="grid">
+
+        <div class="opcion" @click="elegir('cake')">
+          <img src="img/cake.jpg">
+          <p>Cake</p>
+        </div>
+
+        <div class="opcion" @click="elegir('cupcake')">
+          <img src="img/cupcake.png">
+          <p>Cupcake</p>
+        </div>
+
+        <div class="opcion" @click="elegir('gift')">
+          <img src="img/gift.jpg">
+          <p>Gift</p>
+        </div>
+
+        <div class="opcion" @click="elegir('party')">
+          <img src="img/birthday.png">
+          <p>Party</p>
+        </div>
+
+      </div>
+
+      <!-- mensaje -->
+      <div v-if="pantalla==='mensaje'" class="mensaje">
+        {{ mensaje }}
+      </div>
+
+      <button v-if="pantalla==='mensaje'" @click="reiniciar">
+        back
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

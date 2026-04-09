@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background: linear-gradient(#f7c6ff, #ffcfe5, #c6e6ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* ventana */
+.ventana {
+  width: 320px;
+  background: #f9f3c2;
+  border: 4px solid #bfae54;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px #000;
+}
+
+/* barra superior */
+.barra {
+  background: #e8d98c;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.botones span {
+  margin-left: 8px;
+}
+
+/* contenido */
+.contenido {
+  padding: 15px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.opcion {
+  background: white;
+  border: 2px solid #000;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.opcion:hover {
+  transform: scale(1.1);
+}
+
+/* imagen pixel */
+img {
+  width: 64px;
+  image-rendering: pixelated;
+}
+
+/* burbujas */
+.burbuja {
+  position: absolute;
+  bottom: -50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: subir 6s linear infinite;
+}
+
+.burbuja {
+  pointer-events: none;
+}
+/* texto */
+.opcion p {
+  font-size: 8px;
+  margin-top: 5px;
+}
+
+/* mensaje */
+.mensaje {
+  font-size: 10px;
+  margin-top: 10px;
+  line-height: 1.5;
+  animation: aparecer 0.5s ease;
+}
+
+/* botón */
+button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 8px;
+  border: 2px solid #000;
+  background: #ff9ecb;
+  cursor: pointer;
+}
+
+/* animación */
+@keyframes aparecer {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* animación */
+@keyframes subir {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
